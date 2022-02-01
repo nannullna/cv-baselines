@@ -1,0 +1,21 @@
+program: run.py
+method: grid
+metric:
+  name: eval/accuracy
+  goal: maximize
+parameters:
+  learning_rate:
+    values: [1e-3, 5e-3, 1e-2]
+  optimizer:
+    values: ["adam", "adamw", "rmsprop", "sgd"]
+  num_epochs:
+    values: [50]
+  eval_ratio:
+    values: [0.1, 0.3, 0.5, 0.7, 0.9]
+  lr_scheduler_type:
+    values: ["none", "OneCycleLR", "CosineAnnealingLR", "ExponentialLR", "ReduceLROnPlateau"]
+  weight_decay:
+    values: [1e-3]
+  momentum:
+    values: [0.9]
+project: cifar10-baselines
