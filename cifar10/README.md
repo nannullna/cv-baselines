@@ -49,7 +49,61 @@ Here, I implemented a grid search on the most common hyperparameter settings usi
 
 ## Experiment Setting
 
+### Random Seed
 
+- Didn't set any random seed. Reproducibility not guaranteed!!!
+
+- As a personal researcher with limited resources, it is impossible to run each setting multiple times and average its results.
+
+- I also didn't want to tune the model for random seeds, which creates another dimensionality.
+
+- However, you will notice that the results below are consistent in general across different `eval_ratio`s. 
+
+### Model
+
+- ResNet-18 implemented in `torchvision` used.
+
+- The most top `Conv2d` layer is replaced with `nn.Conv2d(3, 64, kernel_size=3, stride=1, padding=1, bias=False)`.
+
+- And max pooling layers are replaced with `nn.Identity()`.
+
+### Optimizer
+
+- Common:
+
+    - learning_rate: `[0.001, 0.005, 0.01]`
+
+    - weight_decay: `0.001`
+
+- SGD w/ momentum & RMSProp:
+
+    - momentum: `0.9`
+
+- Adam & AdamW:
+
+    - betas: `[0.9, 0.999]`
+
+    - epsilon: `1e-8`
+
+### Learning Rate Scheduler
+
+- OneCycleLR:
+
+    - max_lr: `learning_rate * 10`
+
+- CosineAnnealingLR:
+
+    - T_max: `50`
+
+- ExponentialLR:
+
+    - gamma: `0.995`
+
+- ReduceLROnPlateau:
+
+    - metric: `eval/accuracy` (mode: max)
+
+    - patience (tolerance): `1`
 
 ## Summary
 
