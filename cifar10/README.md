@@ -6,7 +6,9 @@ CIFAR-10 is one of the most popular datasets in the ML/DL society, and ResNet is
 
 As a junior researcher, I found out that there is no *de-facto* standard procedure for training ResNet-18 on the CIFAR-10 dataset, which made many researchers and practitioners (including me) confused and time-consuming since it is quite hard to choose the "nice" starting point of each experiment.
 
-While I looked for the baseline for my experiment, I found a nice baseline with detailed explanations on the PyTorch Lightning documentation. Please refer to the [link](https://pytorch-lightning.readthedocs.io/en/stable/notebooks/lightning_examples/cifar10-baseline.html). This baseline shows up to `92%` of accuracy without fine-tuning, and up to `94%` of accuracy with fine-tuning using SWA(Stochastic Weight Averaging). I believe that these scores above are firm and sufficient for most researchers to further investigate their intersets of research. 
+While I looked for the baseline for my experiment, I found a nice baseline with detailed explanations on the PyTorch Lightning documentation. Please refer to the [link](https://pytorch-lightning.readthedocs.io/en/stable/notebooks/lightning_examples/cifar10-baseline.html). 
+
+This baseline shows up to `92%` of accuracy without fine-tuning, and up to `94%` of accuracy with fine-tuning using SWA(Stochastic Weight Averaging). I believe that these scores above are firm, reproducible and sufficient enough for most researchers to further investigate their intersets of research. 
 
 For your information, I summarized the details of the baseline created by PyTorch Lightning team below.
 
