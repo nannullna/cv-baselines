@@ -132,45 +132,50 @@ Here, I implemented a grid search on the most common hyperparameter settings usi
 
 **[By Optimizer and Learning Rate Scheduler]**
 
-| run_id | test_acc | test_loss | learning_rate | optimizer | lr_scheduler       |
-|--------|----------|-----------|---------------|-----------|--------------------|
-|     48 |   0.9402 |    0.2169 |         0.01  |     sgd   | OneCycleLR         |
-|     60 |   0.8892 |    0.4006 |         0.01  |     sgd   | ReduceLROnPlateau  |
-|     52 |   0.8857 |    0.3674 |         0.01  |     sgd   | CosineAnnealingLR  |
-|     36 |   0.5059 |    1.345  |         0.005 |     sgd   | ExponentialLR      |
-|     44 |   0.4628 |    1.434  |         0.01  |     sgd   | None               |
-|      9 |   0.9052 |    0.2984 |         0.001 |     adam  | CosineAnnealingLR  |
-|     17 |   0.8871 |    0.3406 |         0.001 |     adam  | ReduceLROnPlateau  |
-|     41 |   0.8575 |    0.4682 |         0.01  |     adam  | None               |
-|     13 |   0.8097 |    0.5509 |         0.001 |     adam  | ExponentialLR      |
-|      5 |   0.6975 |    0.9179 |         0.001 |     adam  | OneCycleLR         |
-|     26 |   0.9359 |    0.3535 |         0.005 |     adamw | OneCycleLR         |
-|     38 |   0.927  |    0.365  |         0.005 |     adamw | ReduceLROnPlateau  |
-|     30 |   0.9117 |    0.3175 |         0.005 |     adamw | CosineAnnealingLR  |
-|     42 |   0.862  |    0.5221 |         0.01  |     adamw | None               |
-|     14 |   0.795  |    0.5885 |         0.001 |     adamw | ExponentialLR      |
-|     43 |   0.8825 |    0.3713 |         0.01  |   rmsprop | None               |
-|     19 |   0.8228 |    0.522  |         0.001 |   rmsprop | ReduceLROnPlateau  |
-|     11 |   0.7827 |    0.6223 |         0.001 |   rmsprop | CosineAnnealingLR  |
-|     15 |   0.7375 |    0.7552 |         0.001 |   rmsprop | ExponentialLR      |
-|      7 |   0.4774 |    1.533  |         0.001 |   rmsprop | OneCycleLR         |
+| run_id | test_acc | test_loss | learning_rate | optimizer | lr_scheduler          |
+|--------|----------|-----------|---------------|-----------|-----------------------|
+| **48** |**0.9402**| **0.2169**|      **0.01** |   **sgd** | **OneCycleLR**        |
+|     60 |   0.8892 |    0.4006 |         0.01  |     sgd   | ReduceLROnPlateau     |
+|     52 |   0.8857 |    0.3674 |         0.01  |     sgd   | CosineAnnealingLR     |
+|     36 |   0.5059 |    1.345  |         0.005 |     sgd   | ExponentialLR         |
+|     44 |   0.4628 |    1.434  |         0.01  |     sgd   | None                  |
+|        |          |           |               |           |                       |
+|  **9** |**0.9052**| **0.2984**|     **0.001** |  **adam** | **CosineAnnealingLR** |
+|     17 |   0.8871 |    0.3406 |         0.001 |     adam  | ReduceLROnPlateau     |
+|     41 |   0.8575 |    0.4682 |         0.01  |     adam  | None                  |
+|     13 |   0.8097 |    0.5509 |         0.001 |     adam  | ExponentialLR         |
+|      5 |   0.6975 |    0.9179 |         0.001 |     adam  | OneCycleLR            |
+|        |          |           |               |           |                       |
+| **26** |**0.9359**| **0.3535**|     **0.005** | **adamw** | **OneCycleLR**        |
+|     38 |   0.927  |    0.365  |         0.005 |     adamw | ReduceLROnPlateau     |
+|     30 |   0.9117 |    0.3175 |         0.005 |     adamw | CosineAnnealingLR     |
+|     42 |   0.862  |    0.5221 |         0.01  |     adamw | None                  |
+|     14 |   0.795  |    0.5885 |         0.001 |     adamw | ExponentialLR         |
+|        |          |           |               |           |                       |
+| **43** |**0.8825**| **0.3713**|       **0.01**|**rmsprop**| **None**              |
+|     19 |   0.8228 |    0.522  |         0.001 |   rmsprop | ReduceLROnPlateau     |
+|     11 |   0.7827 |    0.6223 |         0.001 |   rmsprop | CosineAnnealingLR     |
+|     15 |   0.7375 |    0.7552 |         0.001 |   rmsprop | ExponentialLR         |
+|      7 |   0.4774 |    1.533  |         0.001 |   rmsprop | OneCycleLR            |
 
 **[By Learnig Rate]**
 
 | run_id | test_acc | test_loss | learning_rate | optimizer | lr_scheduler       |
 |--------|----------|-----------|---------------|-----------|--------------------|
-|      6 |   0.935  |    0.3303 |         0.001 |     adamw | OneCycleLR         |
+|  **6** | **0.935**| **0.3303**|     **0.001** | **adamw** | **OneCycleLR**     |
 |      9 |   0.9052 |    0.2984 |         0.001 |     adam  | CosineAnnealingLR  |
 |      8 |   0.8918 |    0.3869 |         0.001 |     sgd   | OneCycleLR         |
 |     19 |   0.8228 |    0.522  |         0.001 |   rmsprop | ReduceLROnPlateau  |
-|     28 |   0.9384 |    0.2273 |         0.005 |     sgd   | OneCycleLR         |
+|        |          |           |               |           |                     |
+| **28** |**0.9384**| **0.2273**|     **0.005** |   **sgd** | **OneCycleLR**     |
 |     26 |   0.9359 |    0.3535 |         0.005 |     adamw | OneCycleLR         |
 |     23 |   0.8817 |    0.3945 |         0.005 |   rmsprop | None               |
 |     37 |   0.8534 |    0.4374 |         0.005 |     adam  | ReduceLROnPlateau  |
-|     48 |   0.9402 |    0.2169 |         0.01  |     sgd   | OneCycleLR         |
+|        |          |           |               |           |                     |
+| **48** |**0.9402**| **0.2169**|      **0.01** |   **sgd** | **OneCycleLR**     |
 |     46 |   0.9348 |    0.3101 |         0.01  |     adamw | OneCycleLR         |
 |     43 |   0.8825 |    0.3713 |         0.01  |   rmsprop | None               |
-|     41 |   0.8575 |    0.4682 |         0.01  |     adam  | None
+|     41 |   0.8575 |    0.4682 |         0.01  |     adam  | None               |
 
 
 ### Train with 70% of train set
