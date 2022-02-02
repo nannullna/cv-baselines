@@ -96,18 +96,20 @@ Here, I implemented a grid search on the most common hyperparameter settings usi
 
 ### Best Strategy
 
-| rank | optimizer | learning_rate | lr_scheduler      | 90%_acc | 70%_acc | 50%_acc | 30%_acc | 10%_acc |
-|------|-----------|---------------|-------------------|---------|---------|---------|---------|---------|
-|   #1 |       sgd |         0.01  | OneCycleLR        |  0.9402 |  0.9309 |  0.9177 |  0.8834 |  0.7642 |
-|   #2 |       sgd |         0.005 | OneCycleLR        |  0.9384 |  0.9232 |  0.9062 |  0.8659 |  0.752  |
-|   #3 |     adamw |         0.005 | OneCycleLR        |  0.9359 |  0.9279 |  0.9116 |  0.8822 |  0.7598 |
-|   #4 |     adamw |         0.001 | OneCycleLR        |  0.935  |  0.924  |  0.9098 |  0.8837 |  0.7863 |
-|   #5 |     adamw |         0.01  | OneCycleLR        |  0.9348 |  0.927  |  0.9066 |  0.8734 |  0.7229 |
-|   #6 |     adamw |         0.001 | ReduceLROnPlateau |  0.9133 |  0.8976 |  0.8757 |  0.8679 |  0.725  |
-|   #7 |      adam |         0.001 | CosineAnnealingLR |  0.9052 |  0.8942 |  0.8562 |  0.8492 |  0.7529 |
-|   #8 |       sgd |         0.01  | CosineAnnealingLR |  0.8857 |  0.8692 |  0.821  |  0.7953 |  0.6502 |
-|   #9 |      adam |         0.01  | None              |  0.8575 |  0.8441 |  0.8046 |  0.7595 |  0.6177 |
-|  #10 |       sgd |         0.005 | CosineAnnealingLR |  0.8595 |  0.8426 |  0.7692 |  0.7481 |  0.5935 |
+<img align="center" src="resources/cifar10.png" width="60%" height="60%">
+
+|  name  | optimizer | learning_rate | lr_scheduler      | 90%_acc | 70%_acc | 50%_acc | 30%_acc | 10%_acc |
+|--------|-----------|---------------|-------------------|---------|---------|---------|---------|---------|
+|   sgd1 |       sgd |         0.01  | OneCycleLR        |  0.9402 |  0.9309 |  0.9177 |  0.8834 |  0.7642 |
+|   sgd2 |       sgd |         0.005 | OneCycleLR        |  0.9384 |  0.9232 |  0.9062 |  0.8659 |  0.752  |
+| adamw1 |     adamw |         0.005 | OneCycleLR        |  0.9359 |  0.9279 |  0.9116 |  0.8822 |  0.7598 |
+| adamw2 |     adamw |         0.001 | OneCycleLR        |  0.935  |  0.924  |  0.9098 |  0.8837 |  0.7863 |
+| adamw3 |     adamw |         0.01  | OneCycleLR        |  0.9348 |  0.927  |  0.9066 |  0.8734 |  0.7229 |
+| adamw4 |     adamw |         0.001 | ReduceLROnPlateau |  0.9133 |  0.8976 |  0.8757 |  0.8679 |  0.725  |
+|  adam1 |      adam |         0.001 | CosineAnnealingLR |  0.9052 |  0.8942 |  0.8562 |  0.8492 |  0.7529 |
+|   sgd3 |       sgd |         0.01  | CosineAnnealingLR |  0.8857 |  0.8692 |  0.821  |  0.7953 |  0.6502 |
+|  adam2 |      adam |         0.01  | None              |  0.8575 |  0.8441 |  0.8046 |  0.7595 |  0.6177 |
+|   sgd4 |       sgd |         0.005 | CosineAnnealingLR |  0.8595 |  0.8426 |  0.7692 |  0.7481 |  0.5935 |
 
 ## Details
 
