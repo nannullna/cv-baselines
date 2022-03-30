@@ -1,3 +1,7 @@
+## ResNet
+
+![ResNet](resnet.png)
+
 ## Linear Probing Accuracy
 
 **CIFAR10 on ResNet-18**
